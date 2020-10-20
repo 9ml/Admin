@@ -1,0 +1,131 @@
+@import './variables.scss';
+@import './mixin.scss';
+@import './transition.scss';
+@import './element-ui.scss';
+@import './sidebar.scss';
+@import './topbar.scss';
+
+body {
+  height: $contentHeight;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+}
+
+label {
+  font-weight: 700;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app {
+  height: $contentHeight;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+div:focus {
+  outline: none;
+}
+
+.clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+// main-container global css
+.app-container {
+  padding: 20px;
+  background-color: #F6F6F6;
+}
+.box-shadow{
+  background: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+}
+.sl-top{
+  padding: 10px 0;
+  margin-bottom: 20px;
+  background: #FFFFFF;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  .sl-t-item{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .sl-t-margin{
+      margin-left: 20px;
+    }
+  }
+}
+.table-mains{
+  border-radius: 6px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  .tm-top{
+    // height: 60px;
+    padding: 10px 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.table-pages{
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  .t-p-tips{
+    display: flex;
+    align-items: center;
+    .t-p-t-item{
+      font-size: 14px;
+      i{
+        cursor: pointer;
+      }
+    }
+  }
+}
+.table-expand{
+  .t-e-item{
+    width: 100%;
+    margin: 0;
+  }
+}
+.hiddenFonts{
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
